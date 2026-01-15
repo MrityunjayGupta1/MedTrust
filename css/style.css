@@ -1,0 +1,577 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.logo-area { display: flex; align-items: center; gap: 10px; }
+.logo { height: 45px; width: auto; }
+.company-name { font-size: 20px; font-weight: 600; color: #0a3d62; }
+.nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: 500; }
+.nav a:hover { color: #0a3d62; }
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; }
+.product-card h3 { font-size: 18px; margin: 10px 0; }
+.product-card p { font-size: 14px; color: #555; flex-grow: 1; }
+.info-btn,
+.back-btn {
+  background: #2b8c8c;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.back-btn { background: #555; }
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-content {
+  background: white;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  padding: 20px;
+  transform: scale(0.85);
+  transition: transform 0.3s ease;
+}
+.modal.show .modal-content { transform: scale(1); }
+.modal-body { display: flex; gap: 20px; }
+.modal-body img { width: 250px; border-radius: 8px; }
+.modal-text { flex: 1; line-height: 1.6; }
+.close-btn { font-size: 28px; cursor: pointer; float: right; }
+
+/* Footer */
+.site-footer { background: #0a3d62; color: #fff; text-align: center; padding: 25px 10px; margin-top: 40px; }
+.site-footer a { color: #f1f1f1; text-decoration: none; font-weight: 500; }
+.site-footer a:hover { text-decoration: underline; }
+.footer-contact { margin-top: 10px; }
+.footer-contact p { margin: 5px 0; }
+
+
+/* Home page */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #005f73;
+  color: white;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 45px;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #94d2bd;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slider img.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: rgb(251, 246, 246);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0a9396;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Section content */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #225c6f;
+}
+
+/* Footer */
+footer {
+  background: #001219;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+
+/* Responsive */
+@media (max-width:768px){
+  .site-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+  }
+}
+
+
+
+.hero-content h2 {
+  color: white; /* changes heading to white */
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+
+/* Search box */
+#searchInput {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+
+/* Enquiry Page UI */
+.enquiry-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e6f4f1, #f9fbfb);
+  padding: 40px 15px;
+}
+
+.enquiry-card {
+  background: #ffffff;
+  max-width: 480px;
+  width: 100%;
+  padding: 35px 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.enquiry-card h2 {
+  margin-bottom: 5px;
+  color: #0a3d62;
+}
+
+.enquiry-card .subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.enquiry-card input,
+.enquiry-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.enquiry-card input:focus,
+.enquiry-card textarea:focus {
+  border-color: #0a9396;
+  box-shadow: 0 0 0 2px rgba(10,147,150,0.15);
+}
+
+.enquiry-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #0a9396, #007f7f);
+  color: #fff;
+  padding: 13px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.enquiry-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* for enquiry button */
+.enquiry-section {
+  position: relative;
+  z-index: 10;
+}
+
+.enquiry-card {
+  position: relative;
+  z-index: 20;
+}
+
+.enquiry-section::after {
+  display: none;
+}
+
+.enquiry-btn {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+
+
+/* css for phone UI */
+
+/* Hero Section */
+.hero {
+  padding: 80px 20px; /* smaller padding for mobile */
+}
+
+.hero h2 {
+  font-size: 22px; /* smaller text on phone */
+}
+
+
+/* Header */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Enquiry form */
+@media (max-width: 768px) {
+  .products-grid, .enquiry-card {
+    width: 100%; /* stretch cards to fit screen */
+    padding: 20px;
+  }
+}
+
+/* Buttons */
+.btn, .enquiry-btn {
+  width: 100%; /* easy to tap on phone */
+  font-size: 16px; /* slightly bigger for touch */
+}
+
+
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+.dark-mode header {
+  background: #1e1e1e;
+}
+
+.dark-mode nav a {
+  color: #eaeaea;
+}
+
+.dark-mode .product-card {
+  background: #1f1f1f;
+  border-color: #333;
+}
+
+.dark-mode .modal-content {
+  background: #1f1f1f;
+  color: #eaeaea;
+}
+
+
+/* Email float button */
+.email-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #0a66c2;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s;
+  z-index: 999;
+}
+
+.email-float:hover {
+  transform: scale(1.1);
+  background: #084a99;
+}
+
+.email-float {
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+
+/* Enquiry form buttons */
+.enquiry-actions {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+.email-btn {
+  background: #0a66c2;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.email-btn:hover {
+  background: #084a99;
+}
+
+
+
+
+
+
+
+/* Default styles for desktop */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack menu vertically */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Smaller headings */
+  }
+}
+
+
+
+
+
+
+
+
+/* Flexbox example */
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/* Mobile */
+.product-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  /* ❌ avoid fixed height */
+  height: auto;
+  overflow: visible;
+}
+
+.more-info {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+  }
+}
+
+
+
+/* Header CSS fix */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  #themeToggle {
+    margin-top: 8px;
+  }
+}
+

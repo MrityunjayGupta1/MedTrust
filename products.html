@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surgical Products | MedTrust Instruments</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="logo-area">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <span class="company-name">MedTrust</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+  </nav>
+
+  <button id="themeToggle" class="theme-toggle">🌙</button>
+
+</header>
+
+<!-- Page Title -->
+<header>
+  <h1>Products</h1>
+  <section style="text-align:center; padding:20px;">
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Search products..."
+    style="padding:10px; width:250px; max-width:90%;"
+  >
+</section>
+
+</header>
+
+<!-- Products Container -->
+<div id="products-container" class="products-grid"></div>
+
+<!-- Modal -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="modal-body">
+      <img id="modalImage" src="" alt="">
+      <div class="modal-text">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>Contact us for bulk orders and dealership inquiries.</p>
+  <div class="footer-contact">
+    📞 <a href="tel:+919XXXXXXXXX">+91 9XXXXXXXXX</a> &nbsp;&nbsp;
+    ✉️ <a href="mailto:info@medtrust.com">info@medtrust.com</a>
+  </div>
+</footer>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mrityunjaygupta122@gmail.com&su=Product Enquiry"
+   class="email-float"
+   target="_blank"
+   title="Email Us">
+  📧
+</a>
+
+<!-- JS -->
+<script src="js/products.js"></script>
+
+<script src="js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Enquiry | MedTrust Instruments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo-area">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
+    <span class="company-name">MedTrust</span>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+  </nav>
+
+  <button id="themeToggle" class="theme-toggle">🌙</button>
+
+</header>
+
+<section class="enquiry-section">
+  <div class="enquiry-card">
+    <h2>Product Enquiry</h2>
+    <p class="subtitle">Get pricing, availability & product details</p>
+
+    <input type="text" id="name" placeholder="Your Full Name" required>
+    <input type="tel" id="phone" placeholder="Phone / WhatsApp" required>
+    <input type="email" id="email" placeholder="Email Address">
+    <input type="text" id="product" placeholder="Product Name">
+
+    <textarea id="message" rows="4" placeholder="Write your enquiry here..."></textarea>
+
+    <div class="enquiry-actions">
+  <button type="button" class="whatsapp-btn" onclick="sendWhatsApp()">
+    💬 Enquiry via WhatsApp
+  </button>
+
+  <button type="button" class="email-btn" onclick="sendMail()">
+    📧 Enquiry via Email
+  </button>
+</div>
+
+
+  </div>
+</section>
+
+<script>
+function getFormData() {
+  return {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    product: document.getElementById("product").value,
+    message: document.getElementById("message").value
+  };
+}
+
+function sendWhatsApp() {
+  const d = getFormData();
+  const text =
+    `Name: ${d.name}\n` +
+    `Phone: ${d.phone}\n` +
+    `Product: ${d.product}\n` +
+    `Message: ${d.message}`;
+
+  const url =
+    `https://wa.me/918669858096?text=${encodeURIComponent(text)}`;
+
+  window.open(url, "_blank");
+}
+
+function sendMail() {
+  const d = getFormData();
+
+  const mailto =
+    `mailto:mrityunjaygupta122@gmail.com?subject=Website Enquiry&body=` +
+    encodeURIComponent(
+      `Name: ${d.name}\n` +
+      `Phone: ${d.phone}\n` +
+      `Product: ${d.product}\n` +
+      `Message: ${d.message}`
+    );
+
+  window.location.href = mailto;
+}
+</script>
+
+
+
+<footer>© MedTrust Instruments</footer>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mrityunjaygupta122@gmail.com&su=Product Enquiry"
+   class="email-float"
+   target="_blank"
+   title="Email Us">
+  📧
+</a>
+
+<script>
+function sendMail() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const product = document.getElementById("product").value;
+  const message = document.getElementById("message").value;
+
+  if (!name || !phone || !product) {
+    alert("Please fill Name, Phone and Product fields");
+    return;
+  }
+
+  const subject = "Product Enquiry from Website";
+
+  const body =
+`Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Product: ${product}
+
+Message:
+${message}`;
+
+  const gmailURL =
+    "https://mail.google.com/mail/?view=cm&fs=1" +
+    "&to=mrityunjaygupta122@gmail.com" +
+    "&su=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+
+  window.open(gmailURL, "_blank");
+}
+</script>
+
+<script src="js/theme.js"></script>
+
+</body>
+</html>
