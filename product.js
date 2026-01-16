@@ -1,7 +1,7 @@
 const products = {
   "scalpel": {
     name: "Surgical Scalpel",
-    image: "images/scalpel.jpg",
+    image: "images/scalpels.jpg",
     description: "High-precision stainless steel surgical scalpel used for accurate incisions in medical procedures. Designed for sharpness, durability, and control."
   },
   "forceps": {
