@@ -43,10 +43,10 @@ fetch("data/products.json")
   <img src="images/${product.image}" alt="${product.name}">
   <h3>${product.name}</h3>
   <p class="short-desc">${product.description}</p>
-  <button class="info-btn" onclick='openModal(${JSON.stringify(product)})'>
-    More Info
-  </button>
-`;
+  function viewProduct(id) {
+  window.location.href = `product.html?id=${id}`;
+}
+.;
 
 
         card.querySelector(".info-btn").onclick = () => openModal(product);
