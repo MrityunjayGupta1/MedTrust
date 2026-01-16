@@ -43,6 +43,11 @@ fetch("data/products.json")
   <img src="images/${product.image}" alt="${product.name}">
   <h3>${product.name}</h3>
   <p class="short-desc">${product.description}</p>
+
+  <button class="view-btn" onclick="viewProduct('${product.id}')">
+  View Product
+</button>
+
   function viewProduct(id) {
   window.location.href = `product.html?id=${id}`;
 }
