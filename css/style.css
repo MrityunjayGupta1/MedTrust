@@ -634,4 +634,22 @@ img {
   }
 }
 
+/* FORCE products to show on mobile */
+#products-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  #products-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
 
