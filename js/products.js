@@ -67,3 +67,19 @@ fetch("data/products.json")
     });
   })
   .catch(err => console.error(err));
+
+
+function openModal(product) {
+  document.getElementById("modalImage").src = "images/" + product.image;
+  document.getElementById("modalTitle").innerText = product.name;
+  document.getElementById("modalInfo").innerText = product.moreInfo;
+
+  document.getElementById("productModal").classList.add("show");
+  document.body.style.overflow = "hidden"; // lock background scroll
+}
+
+function closeModal() {
+  document.getElementById("productModal").classList.remove("show");
+  document.body.style.overflow = "auto";
+}
+
