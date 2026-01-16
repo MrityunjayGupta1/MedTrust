@@ -687,5 +687,13 @@ img {
 }
 
 
-
+.modal-content {
+  background: white;
+  width: 95%;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: 16px;
+  padding: 15px;
+  overflow-y: auto;
+}
 
