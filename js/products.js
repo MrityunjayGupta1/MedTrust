@@ -40,11 +40,14 @@ fetch("data/products.json")
         card.className = "product-card";
 
         card.innerHTML = `
-          <img src="images/${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>${product.description}</p>
-          <button class="info-btn">More Info</button>
-        `;
+  <img src="images/${product.image}" alt="${product.name}">
+  <h3>${product.name}</h3>
+  <p class="short-desc">${product.description}</p>
+  <button class="info-btn" onclick='openModal(${JSON.stringify(product)})'>
+    More Info
+  </button>
+`;
+
 
         card.querySelector(".info-btn").onclick = () => openModal(product);
         container.appendChild(card);
