@@ -5,78 +5,234 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Surgical Products | MedTrust Instruments</title>
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Page */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+    }
+
+    /* Header */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #0e5a6f;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      padding: 30px 15px;
+      background: white;
+    }
+
+    .page-header h1 {
+      margin-bottom: 15px;
+    }
+
+    .search-box {
+      padding: 10px;
+      width: 260px;
+      max-width: 90%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin: 15px 0 8px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+      min-height: 45px;
+    }
+
+    .view-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #2f8f8b;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .view-btn:hover {
+      background: #256f6c;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #0e5a6f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .footer-contact a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Floating Email */
+    .email-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1a73e8;
+      color: white;
+      font-size: 22px;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
 
 <!-- Header -->
 <header class="site-header">
   <div class="logo-area">
-    <img src="images/logo.png" alt="Company Logo" class="logo">
-    <span class="company-name">MedTrust</span>
+    <img src="images/logo.png" class="logo" alt="MedTrust">
+    <strong>MedTrust</strong>
   </div>
 
   <nav class="nav">
     <a href="index.html">Home</a>
-    <a href="products.html" class="active">Products</a>
+    <a href="products.html">Products</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="enquiry.html">Enquiry</a>
   </nav>
 </header>
 
-<!-- Page Title -->
+<!-- Page Header -->
 <section class="page-header">
-  <h1>Products</h1>
-  <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="Search products..."
-    class="search-box"
-  >
+  <h1>Our Products</h1>
+  <input type="text" placeholder="Search products..." class="search-box">
 </section>
 
-<!-- Products Grid -->
+<!-- Products -->
 <section class="products-grid">
 
-  <!-- Product Card -->
   <div class="product-card">
-    <img src="images/scalpel.jpg" alt="Surgical Scalpel">
+    <img src="images/scalpel.jpg">
     <h3>Surgical Scalpel</h3>
     <p>High-precision stainless steel scalpel.</p>
     <a href="product.html?id=scalpel" class="view-btn">View Product</a>
   </div>
 
   <div class="product-card">
-    <img src="images/forceps.jpg" alt="Surgical Forceps">
+    <img src="images/forceps.jpg">
     <h3>Surgical Forceps</h3>
     <p>Medical-grade forceps with firm grip.</p>
     <a href="product.html?id=forceps" class="view-btn">View Product</a>
   </div>
 
   <div class="product-card">
-    <img src="images/scissors.jpg" alt="Surgical Scissors">
+    <img src="images/scissors.jpg">
     <h3>Surgical Scissors</h3>
-    <p>Sharp scissors for precise cutting.</p>
+    <p>Sharp surgical scissors for precise cutting.</p>
     <a href="product.html?id=scissors" class="view-btn">View Product</a>
   </div>
 
   <div class="product-card">
-    <img src="images/bp-monitor.jpg" alt="BP Monitor">
+    <img src="images/bp-monitor.jpg">
     <h3>Blood Pressure Monitor</h3>
-    <p>Accurate digital BP monitoring device.</p>
+    <p>Digital blood pressure monitoring device.</p>
     <a href="product.html?id=bp-monitor" class="view-btn">View Product</a>
+  </div>
+
+  <div class="product-card">
+    <img src="images/sugar-monitor.jpg">
+    <h3>Blood Sugar Monitor</h3>
+    <p>Portable blood glucose monitoring device.</p>
+    <a href="product.html?id=sugar-monitor" class="view-btn">View Product</a>
+  </div>
+
+  <div class="product-card">
+    <img src="images/stethoscope.jpg">
+    <h3>Stethoscope</h3>
+    <p>High-quality stethoscope for diagnosis.</p>
+    <a href="product.html?id=stethoscope" class="view-btn">View Product</a>
+  </div>
+
+  <div class="product-card">
+    <img src="images/oximeter.jpg">
+    <h3>Oximeter</h3>
+    <p>Pulse oximeter for oxygen level measurement.</p>
+    <a href="product.html?id=oximeter" class="view-btn">View Product</a>
   </div>
 
 </section>
 
 <!-- Footer -->
 <footer class="site-footer">
-  <p>Contact us for bulk orders and dealership inquiries.</p>
+  <p>Contact us for bulk orders and dealership inquiries</p>
   <div class="footer-contact">
-    📞 <a href="tel:+919XXXXXXXXX">+91 9XXXXXXXXX</a>
-    ✉️ <a href="mailto:info@medtrust.com">info@medtrust.com</a>
+    📞 +91 9XXXXXXXXX | ✉️ info@medtrust.com
   </div>
 </footer>
 
 <!-- Floating Email -->
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mrityunjayg
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mrityunjaygupta122@gmail.com&su=Product Enquiry"
+   class="email-float"
+   target="_blank">📧</a>
+
+</body>
+</html>
