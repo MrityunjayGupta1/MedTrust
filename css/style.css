@@ -720,3 +720,28 @@ header {
 }
 
 
+
+/* View Product buttons (Products page) */
+.view-product-btn,
+.product-card button,
+.product-card .btn {
+    background-color: #2f8f8b; /* same as home page */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.view-product-btn:hover,
+.product-card button:hover,
+.product-card .btn:hover {
+    background-color: #247370;
+}
+
+
+
