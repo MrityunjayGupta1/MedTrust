@@ -744,4 +744,17 @@ header {
 }
 
 
+/* Page header sections (About, Contact, etc.) */
+.page-header,
+.section-header,
+.about-header,
+.contact-header {
+    background-color: #ffffff;
+    color: #0a2540; /* dark text */
+    padding: 40px 20px;
+    text-align: left;
+}
+
+
+
 
