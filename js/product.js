@@ -1,29 +1,34 @@
-const params = new URLSearchParams(window.location.search);
-const productId = params.get("id");
-
 const products = {
   scalpel: {
     name: "Surgical Scalpel",
     image: "images/scalpel.jpg",
-    description: "High-quality stainless steel surgical scalpel."
+    description: "High-quality stainless steel scalpel used for precise surgical incisions."
   },
   forceps: {
     name: "Surgical Forceps",
     image: "images/forceps.jpg",
-    description: "Durable medical forceps with strong grip."
+    description: "Medical-grade forceps designed for firm grip and control."
+  },
+  scissors: {
+    name: "Surgical Scissors",
+    image: "images/scissors.jpg",
+    description: "Sharp surgical scissors suitable for medical procedures."
   }
 };
 
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
 const container = document.getElementById("productDetails");
 
-if (!productId || !products[productId]) {
-  container.innerHTML = `<h2>Product not found</h2>`;
+if (!id || !products[id]) {
+  container.innerHTML = "<h2>Product not found</h2>";
 } else {
-  const p = products[productId];
+  const p = products[id];
   container.innerHTML = `
-    <img src="${p.image}" style="width:300px">
+    <img src="${p.image}" alt="${p.name}">
     <h1>${p.name}</h1>
     <p>${p.description}</p>
-    <a href="products.html">← Back to Products</a>
   `;
 }
+
