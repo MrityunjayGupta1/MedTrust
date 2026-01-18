@@ -1,13 +1,29 @@
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
-fetch("data/products.json")
-  .then(res => res.json())
-  .then(products => {
-    const product = products.find(p => p.id === productId);
-    if (!product) return;
+const products = {
+  scalpel: {
+    name: "Surgical Scalpel",
+    image: "images/scalpel.jpg",
+    description: "High-quality stainless steel surgical scalpel."
+  },
+  forceps: {
+    name: "Surgical Forceps",
+    image: "images/forceps.jpg",
+    description: "Durable medical forceps with strong grip."
+  }
+};
 
-    document.getElementById("productImage").src = "images/" + product.image;
-    document.getElementById("productName").innerText = product.name;
-    document.getElementById("productDesc").innerText = product.moreInfo;
-  });
+const container = document.getElementById("productDetails");
+
+if (!productId || !products[productId]) {
+  container.innerHTML = `<h2>Product not found</h2>`;
+} else {
+  const p = products[productId];
+  container.innerHTML = `
+    <img src="${p.image}" style="width:300px">
+    <h1>${p.name}</h1>
+    <p>${p.description}</p>
+    <a href="products.html">← Back to Products</a>
+  `;
+}
