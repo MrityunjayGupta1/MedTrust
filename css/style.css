@@ -782,9 +782,8 @@ header {
 }
 
 
-.product-search input:focus {
-    border-color: #2f8f8b;
-    box-shadow: 0 0 0 2px rgba(47, 143, 139, 0.2);
+.product-search input {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 
