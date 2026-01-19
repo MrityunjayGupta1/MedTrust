@@ -2,21 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Product Details | MedTrust</title>
+  <title>Product Details | MedTrust Instruments</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detailed information about medical and surgical products by MedTrust Instruments.">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<a href="products.html" style="margin:15px; display:inline-block;">
-  ← Back to Products
-</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-area">
+      <img src="images/logo.png" alt="MedTrust Logo" class="logo">
+      <span class="company-name">MedTrust</span>
+    </div>
 
-<div id="productDetails" class="product-detail">
-  <!-- Product will load here -->
-</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="enquiry.html">Enquiry</a>
+    </nav>
+  </header>
 
-<script src="js/product.js"></script>
+  <!-- Product Detail Section -->
+  <main class="product-detail-page">
+    <a href="products.html" class="back-link">← Back to Products</a>
+
+    <div id="productDetails" class="product-detail-card">
+      <!-- Product content will load here via JS -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 MedTrust Instruments. All rights reserved.</p>
+  </footer>
+
+  <!-- Product JS (DO NOT REMOVE) -->
+  <script src="js/product.js"></script>
 
 </body>
 </html>
