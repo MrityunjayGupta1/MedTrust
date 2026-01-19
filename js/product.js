@@ -19,7 +19,7 @@ const products = {
     image: "images/stethoscope.jpg",
     description: "Sharp surgical scissors suitable for medical procedures."
 },
-   bloodpressuremonitor: {
+   bpmonitor: {
     name: "Blood Pressure Monitor",
     image: "images/bp-monitor.jpg",
     description: "Sharp surgical scissors suitable for medical procedures."
@@ -30,9 +30,9 @@ const products = {
     description: "Sharp surgical scissors suitable for medical procedures."
 },
 
-   bloodsugarmonitor: {
+   sugarmonitor: {
     name: "Blood Sugar Monitor",
-    image: "images/sugar monitor.jpg",
+    image: "images/sugar-monitor.jpg",
     description: "Sharp surgical scissors suitable for medical procedures."
   }
 };
