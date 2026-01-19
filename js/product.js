@@ -14,8 +14,32 @@ const products = {
     image: "images/scissors.jpg",
     description: "Sharp surgical scissors suitable for medical procedures."
   }
-};
+},
+   stethoscope: {
+    name: "Stethoscope",
+    image: "images/stethoscope.jpg",
+    description: "Sharp surgical scissors suitable for medical procedures."
+  }
+},
+   blood pressure monitor: {
+    name: "Blood Pressure Monitor",
+    image: "images/bp-monitor.jpg",
+    description: "Sharp surgical scissors suitable for medical procedures."
+  }
+},
+   oximeter: {
+    name: "Oximeter",
+    image: "images/oximeter.jpg",
+    description: "Sharp surgical scissors suitable for medical procedures."
+  }
+},
 
+   blood suger monitor: {
+    name: "Blood Sugar Monitor",
+    image: "images/sugar monitor.jpg",
+    description: "Sharp surgical scissors suitable for medical procedures."
+  }
+};
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
